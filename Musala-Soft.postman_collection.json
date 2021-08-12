@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "5199fb3d-78a1-49bc-b410-e2ca02dcd414",
+		"name": "Musala-Soft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/create-gateway",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"strictSSL": true,
+				"followRedirects": true,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"serialNumber\": \"8ac9bbbc-2ff9-4152-b9a0-216808534aa4\",\n        \"name\": \"Hello-World\",\n        \"devices\": [\n\n            {\n                \"uid\": \"22306491275125759176277121425915259688\",\n                \"vendor\": \"Apple\",\n                \"creationDate\": \"2021-08-10T05:31:45.296+00:00\",\n                \"online\": true\n            }\n        ],\n        \"ip\": \"18.18.19.88\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/musala-soft/gateways/create-gateway",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"musala-soft",
+						"gateways",
+						"create-gateway"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gateways/retrieve-all",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"strictSSL": true,
+				"followRedirects": true,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Hello-World\",\n    \"ip\": \"18.18.18.502\",\n    \"devices\" : [\n        {\n            \"id\": 2,\n            \"vendor\":\"IBMM\",\n            \"creationDate\":\"1628573505296\",\n            \"online\":true\n        }, \n        {\n            \"id\": 3,\n            \"vendor\":\"Apple\",\n            \"creationDate\":\"1628573505296\",\n            \"online\":true\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/musala-soft/peripheral-devices/retrieve-all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"musala-soft",
+						"peripheral-devices",
+						"retrieve-all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gateways/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"strictSSL": true,
+				"followRedirects": true,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Hello-World\",\n    \"ip\": \"18.18.18.502\",\n    \"devices\" : [\n        {\n            \"id\": 2,\n            \"vendor\":\"IBMM\",\n            \"creationDate\":\"1628573505296\",\n            \"online\":true\n        }, \n        {\n            \"id\": 3,\n            \"vendor\":\"Apple\",\n            \"creationDate\":\"1628573505296\",\n            \"online\":true\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/musala-soft/gateways/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"musala-soft",
+						"gateways",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "peripheral-devices/retrieve-all",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"strictSSL": true,
+				"followRedirects": true,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Hello-World\",\n    \"ip\": \"18.18.18.502\",\n    \"devices\" : [\n        {\n            \"id\": 2,\n            \"vendor\":\"IBMM\",\n            \"creationDate\":\"1628573505296\",\n            \"online\":true\n        }, \n        {\n            \"id\": 3,\n            \"vendor\":\"Apple\",\n            \"creationDate\":\"1628573505296\",\n            \"online\":true\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/musala-soft/peripheral-devices/retrieve-all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"musala-soft",
+						"peripheral-devices",
+						"retrieve-all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
